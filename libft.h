@@ -6,18 +6,28 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 16:15:19 by rphuyal           #+#    #+#             */
-/*   Updated: 2023/04/23 23:49:20 by rphuyal          ###   ########.fr       */
+/*   Updated: 2023/05/22 22:06:07 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+/* for gnl */
 # define HEXMIN "0123456789abcdef"
 # define HEXMAX "0123456789ABCDEF"
 # define DECIMAL "0123456789"
 
-/* if the buffersize is not manully defined during compilation*/
+/* colors */
+#define BOLD "\033[1m"
+#define GREEN "\033[0;32m"
+#define RED "\033[0;31m"
+#define RESET "\033[0m"
+#define YELLOW "\x1b[33m"
+#define CYAN "\x1b[36m"
+#define UNDERLINE "\x1b[4m"
+
+/* if the buffersize is not manully defined during compilation which probably is not*/
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
