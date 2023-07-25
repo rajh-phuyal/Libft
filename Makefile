@@ -6,17 +6,25 @@
 #    By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 16:15:26 by rphuyal           #+#    #+#              #
-#    Updated: 2023/04/24 00:01:01 by rphuyal          ###   ########.fr        #
+#    Updated: 2023/07/25 21:47:22 by rphuyal          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
+CC = @cc
 
 CFLAGS = -Wall -Wextra -Werror -I .
 
 RM = rm -f
+
+# COLORS
+CBOLD   = \033[0;1m
+RED     = \033[0;41m
+GREEN   = \033[0;42m
+BLUE   = \033[0;44m
+YELLOW  = \033[0;43m
+RESET   = \033[0m
 
 SRC    = strings/ft_atoi.c \
 		memory/ft_bzero.c \
@@ -44,6 +52,8 @@ SRC    = strings/ft_atoi.c \
 		memory/ft_calloc.c \
 		strings/ft_itoa.c \
 		strings/ft_strlen.c \
+		strings/ft_splitlen.c \
+		strings/ft_emptystr.c \
 		strings/ft_strncmp.c \
 		strings/ft_substr.c \
 		strings/ft_strtrim.c \
@@ -73,13 +83,15 @@ OBJ = $(SRC:.c=.o)
 all:	$(NAME)
 
 $(NAME):    $(OBJ)
-		@ar rcs $(NAME) $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
+	@echo "$(CBOLD)$(GREEN)    Libft ready!    $(RESET)"
 
 clean:
-		@$(RM) $(OBJ)
-		@rm -rf obj
+	@$(RM) $(OBJ)
+	@echo "$(CBOLD)$(BLUE)  Objects removed!  $(RESET)"
 
-fclean:    clean
-		@$(RM) $(NAME)
+fclean: clean
+	@$(RM) $(NAME)
+	@echo "$(CBOLD)$(BLUE)  Binaries removed! $(RESET)"
 
 re:	fclean $(NAME)
