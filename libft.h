@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 16:15:19 by rphuyal           #+#    #+#             */
-/*   Updated: 2023/07/25 21:41:16 by rphuyal          ###   ########.fr       */
+/*   Updated: 2023/07/25 22:20:28 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 # define BOLD "\033[1m"
 # define GREEN "\033[0;32m"
 # define RED "\033[0;31m"
-# define RESET "\033[0m"
 # define YELLOW "\x1b[33m"
 # define CYAN "\x1b[36m"
 # define UNDERLINE "\x1b[4m"
+# define RESET_COLOR "\033[0m"
 
 /* if the buffersize is not manully defined during
 compilation which probably is not*/

@@ -6,7 +6,7 @@
 /*   By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 16:16:20 by rphuyal           #+#    #+#             */
-/*   Updated: 2023/05/22 22:04:17 by rphuyal          ###   ########.fr       */
+/*   Updated: 2023/07/25 22:20:58 by rphuyal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	print_message(char *message, int *calculated)
 	iter = ft_strlen(message);
 	while (*message && iter--)
 		printf("%c", *message++);
-	printf(CYAN "║" RESET "\n");
+	printf(CYAN "║" RESET_COLOR "\n");
 }
 
 int	ft_error(char *heading, char *message)
@@ -81,15 +81,15 @@ int	ft_error(char *heading, char *message)
 	while (iter--)
 		printf("═");
 	iter = 51;
-	printf("╗" RESET "\n");
+	printf("╗" RESET_COLOR "\n");
 	printf(CYAN "║");
 	print_line(calculated[2] / 2, ' ');
-	printf(RED "%s" RESET, heading);
+	printf(RED "%s" RESET_COLOR, heading);
 	print_line(calculated[2] / 2, ' ');
-	printf(CYAN "║" RESET "\n");
+	printf(CYAN "║" RESET_COLOR "\n");
 	printf(CYAN "╟");
 	print_line(52, '-');
-	printf("╢" RESET "\n");
+	printf("╢" RESET_COLOR "\n");
 	print_message(message, calculated);
 	free(calculated);
 	return (1);
