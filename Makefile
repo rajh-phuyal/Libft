@@ -6,7 +6,7 @@
 #    By: rphuyal <rphuyal@student.42lisboa.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 16:15:26 by rphuyal           #+#    #+#              #
-#    Updated: 2023/07/25 21:47:22 by rphuyal          ###   ########.fr        #
+#    Updated: 2023/07/25 21:56:41 by rphuyal          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,14 +84,11 @@ all:	$(NAME)
 
 $(NAME):    $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@echo "$(CBOLD)$(GREEN)    Libft ready!    $(RESET)"
 
 clean:
 	@$(RM) $(OBJ)
-	@echo "$(CBOLD)$(BLUE)  Objects removed!  $(RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(CBOLD)$(BLUE)  Binaries removed! $(RESET)"
 
 re:	fclean $(NAME)
